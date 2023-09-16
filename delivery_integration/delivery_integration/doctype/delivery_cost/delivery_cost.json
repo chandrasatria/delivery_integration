@@ -1,0 +1,119 @@
+{
+ "autoname": "format:DC{MM}{###}{YY}{DD}",
+ "creation": "2021-02-08 14:27:06.875397",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "can_cod",
+  "territory_info_section",
+  "from_territory",
+  "column_break_4",
+  "estimated_from",
+  "estimated_to",
+  "to_territory",
+  "requirements_section",
+  "conversion_to_kgv",
+  "price_info_section",
+  "selling_price_in_kg"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "territory_info_section",
+   "fieldtype": "Section Break",
+   "label": "Territory Info"
+  },
+  {
+   "fieldname": "from_territory",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "From Territory",
+   "options": "Territory",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_territory",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "To Territory",
+   "options": "Territory",
+   "reqd": 1
+  },
+  {
+   "description": "Goods that have a weight less than the minimum <b>will be changed automatically</b> according to the minimum number that has been determined<br>\n<b>Formula and Conditions:</b><br>\n<table border=\"1\" style=\"text-align: center;\">\n\t<thead style=\"font-weight: bold;\">\n\t\t<tr>\n\t\t\t<td colspan=\"3\" style=\"padding: 4px;\">FORMULA AND CONDITIONS</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"padding: 4px;\">Variable</td>\n\t\t\t<td style=\"padding: 4px;\">Operator</td>\n\t\t\t<td style=\"padding: 4px;\">Explanation</td>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"padding: 4px;\">Kg (V)</td>\n\t\t\t<td style=\"padding: 4px;\">=</td>\n\t\t\t<td style=\"padding: 4px;\">(P x L x T) / Conversion</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"padding: 4px;\">Kg Taken by System</td>\n\t\t\t<td style=\"padding: 4px;\">=</td>\n\t\t\t<td style=\"padding: 4px;\">Largest Value of Actual Kg and Kg(V)</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"padding: 4px;\">Price</td>\n\t\t\t<td style=\"padding: 4px;\">=</td>\n\t\t\t<td style=\"padding: 4px;\">Kg Taken by System x Price in Kg</td>\n\t\t</tr>\n\t</tbody>\n</table>\n<br>\n<b>Sample Case:</b><br>\n<table border=\"1\" style=\"text-align: center;\">\n\t<thead style=\"font-weight: bold;\">\n\t\t<tr>\n\t\t\t<td colspan=\"3\" style=\"padding: 4px;\">REQUIREMENTS</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"padding: 4px;\">Price in Kg (IDR/ Rupiah)</td>\n\t\t\t<td style=\"padding: 4px;\">Minimum Weight in Kg</td>\n\t\t\t<td style=\"padding: 4px;\">Conversion to Kg(V)</td>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"padding: 4px;\">Rp. 6.000,00</td>\n\t\t\t<td style=\"padding: 4px;\">10</td>\n\t\t\t<td style=\"padding: 4px;\">4000</td>\n\t\t</tr>\n\t</tbody>\n</table>\n<br>\n<table border=\"1\" style=\"text-align: center;\">\n\t<thead style=\"font-weight: bold;\">\n\t\t<tr>\n\t\t\t<td style=\"padding: 4px;\">P (cm)</td>\n\t\t\t<td style=\"padding: 4px;\">L (cm)</td>\n\t\t\t<td style=\"padding: 4px;\">T (cm)</td>\n\t\t\t<td style=\"padding: 4px;\">Kg (Actual)</td>\n\t\t\t<td style=\"padding: 4px;\">Kg (V)</td>\n\t\t\t<td style=\"padding: 4px;\">Kg Taken by System</td>\n\t\t\t<td style=\"padding: 4px;\">Price</td>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td style=\"padding: 4px;\">20</td>\n\t\t\t<td style=\"padding: 4px;\">30</td>\n\t\t\t<td style=\"padding: 4px;\">30</td>\n\t\t\t<td style=\"padding: 4px;\">10</td>\n\t\t\t<td style=\"padding: 4px;\">4,5</td>\n\t\t\t<td style=\"padding: 4px;\">10</td>\n\t\t\t<td style=\"padding: 4px;\">Rp. 60.000,00</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"padding: 4px;\">50</td>\n\t\t\t<td style=\"padding: 4px;\">50</td>\n\t\t\t<td style=\"padding: 4px;\">50</td>\n\t\t\t<td style=\"padding: 4px;\">20</td>\n\t\t\t<td style=\"padding: 4px;\">31,25</td>\n\t\t\t<td style=\"padding: 4px;\">31,25</td>\n\t\t\t<td style=\"padding: 4px;\">Rp. 187.500,00</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td style=\"padding: 4px;\">80</td>\n\t\t\t<td style=\"padding: 4px;\">80</td>\n\t\t\t<td style=\"padding: 4px;\">80</td>\n\t\t\t<td style=\"padding: 4px;\">50</td>\n\t\t\t<td style=\"padding: 4px;\">128</td>\n\t\t\t<td style=\"padding: 4px;\">128</td>\n\t\t\t<td style=\"padding: 4px;\">Rp. 768.000,00</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td colspan=\"5\" style=\"padding: 4px; font-weight: bold;\">TOTAL</td>\n\t\t\t<td style=\"padding: 4px;\">169,25</td>\n\t\t\t<td style=\"padding: 4px;\">Rp. 1.015.500,00</td>\n\t\t</tr>\n\t</tbody>\n</table>",
+   "fieldname": "requirements_section",
+   "fieldtype": "Section Break",
+   "label": "Requirements"
+  },
+  {
+   "fieldname": "conversion_to_kgv",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Conversion to Kg(V)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price_info_section",
+   "fieldtype": "Section Break",
+   "label": "Price Info"
+  },
+  {
+   "fieldname": "selling_price_in_kg",
+   "fieldtype": "Currency",
+   "label": "Selling Price in Kg",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "can_cod",
+   "fieldtype": "Check",
+   "label": "Can COD"
+  },
+  {
+   "description": "(In Days)",
+   "fieldname": "estimated_from",
+   "fieldtype": "Int",
+   "label": "Estimated From"
+  },
+  {
+   "description": "(In Days)",
+   "fieldname": "estimated_to",
+   "fieldtype": "Int",
+   "label": "Estimated To"
+  }
+ ],
+ "modified": "2021-03-19 14:40:22.453633",
+ "modified_by": "dev@wss.com",
+ "module": "Delivery Integration",
+ "name": "Delivery Cost",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "title"
+}

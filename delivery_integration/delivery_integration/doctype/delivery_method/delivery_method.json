@@ -1,0 +1,104 @@
+{
+ "allow_rename": 1,
+ "autoname": "field:delivery_name",
+ "creation": "2021-02-04 17:40:49.076148",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "delivery_info_section",
+  "delivery_name",
+  "image",
+  "section_break_3",
+  "server",
+  "column_break_6",
+  "token",
+  "section_break_8",
+  "api_get_price",
+  "api_get_tracking"
+ ],
+ "fields": [
+  {
+   "fieldname": "delivery_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Delivery Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Server Info"
+  },
+  {
+   "description": "If calculation based on delivery cost, please fill with \"-\"",
+   "fieldname": "server",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Server",
+   "reqd": 1
+  },
+  {
+   "description": "If calculation based on delivery cost, please fill with \"-\"",
+   "fieldname": "token",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Token",
+   "reqd": 1
+  },
+  {
+   "fieldname": "delivery_info_section",
+   "fieldtype": "Section Break",
+   "label": "Delivery Info"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.server != \"\" && doc.server != \"-\" && doc.token != \"\" && doc.token != \"-\"",
+   "fieldname": "api_get_price",
+   "fieldtype": "Text",
+   "label": "API Get Price"
+  },
+  {
+   "fieldname": "api_get_tracking",
+   "fieldtype": "Text",
+   "label": "API Get Tracking"
+  }
+ ],
+ "image_field": "image",
+ "modified": "2021-03-16 10:14:18.817661",
+ "modified_by": "Administrator",
+ "module": "Delivery Integration",
+ "name": "Delivery Method",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "delivery_name"
+}

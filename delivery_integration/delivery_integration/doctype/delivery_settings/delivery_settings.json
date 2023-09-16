@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "creation": "2021-01-27 14:27:36.094749",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "token_info_section",
+  "muat_cargo_server",
+  "muat_cargo_token"
+ ],
+ "fields": [
+  {
+   "fieldname": "token_info_section",
+   "fieldtype": "Section Break",
+   "label": "Token Info"
+  },
+  {
+   "fieldname": "muat_cargo_server",
+   "fieldtype": "Data",
+   "label": "MUAT Cargo Server"
+  },
+  {
+   "fieldname": "muat_cargo_token",
+   "fieldtype": "Data",
+   "label": "MUAT Cargo Token"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2021-01-27 14:27:36.094749",
+ "modified_by": "Administrator",
+ "module": "Delivery Integration",
+ "name": "Delivery Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

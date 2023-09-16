@@ -1,0 +1,15 @@
+[
+ {
+  "delivery_name": "Muat Cargo",
+  "docstatus": 0,
+  "doctype": "Delivery Method",
+  "image": "/files/muatf1cb2b.jpg",
+  "modified": "2021-02-04 18:02:46.885428",
+  "name": "Muat Cargo",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "server": "https://cargoadmin.muat.co",
+  "token": "token fa6fda74c87535c:6a366f8d228881d"
+ }
+]
